@@ -3,10 +3,10 @@ const middleButton = document.getElementById('middleButton');
 const subText = document.getElementById('subText');
 const resetButton = document.getElementById('resetButton');
 
-const symbolString = "~!@#$%^&*?"
+const symbolString = "!@#$%^&*?~"
 const pages = [
     {
-        pageNumber: 0,
+        // page 0,
         pageMainText: "I can read your mind",
         middleButtonText: "NEXT",
         middleButtonVisibility: "hidden",
@@ -15,7 +15,7 @@ const pages = [
 
     },
     {
-        pageNumber: 1,
+        // page 1
         pageMainText: "Pick a number from 01 - 99",
         middleButtonText: "NEXT",
         middleButtonVisibility: "visible",
@@ -23,7 +23,7 @@ const pages = [
         resetButtonText: "icon"
     },
     {
-        pageNumber: 2,
+        // page 2
         pageMainText: "Add both digits together to get a new number",
         middleButtonText: "NEXT",
         middleButtonVisibility: "visible",
@@ -31,7 +31,7 @@ const pages = [
         resetButtonText: "icon"
     },
     {
-        pageNumber: 3,
+        // page 3
         pageMainText: "Subtract your new number from the original number",
         middleButtonText: "NEXT",
         middleButtonVisibility: "visible",
@@ -39,7 +39,7 @@ const pages = [
         resetButtonText: "icon"
     },
     {
-        pageNumber: 4,
+        // page 4
         pageMainText: ":insertsymbollist:",
         middleButtonText: "REVEAL",
         middleButtonVisibility: "visible",
@@ -47,7 +47,7 @@ const pages = [
         resetButtonText: "icon"
     },
     {
-        pageNumber: 5,
+        // page 5
         pageMainText: ":insertsymbol:",
         middleButtonText: "",
         middleButtonVisibility: "hidden",
@@ -59,6 +59,7 @@ const pages = [
 var currentPage = 0;
 
 updatePage();
+updateSymbols();
 
 middleButton.addEventListener('click', nextPage);
 resetButton.addEventListener('click', resetPage);
@@ -82,6 +83,7 @@ function resetPage() {
     } else {
         currentPage = 0;
         updatePage();
+        updateSymbols();
     }
 }
 
@@ -100,4 +102,22 @@ function shuffle(string) {
 
 function generateSymbolList() {
     var symbolList = shuffle(symbolString);
+    var outputText = "0 - " + symbolList[0];
+    counter = 1;
+    while (counter < 100) {
+        if (counter % 9 == 0) {
+            outputText += "\n" + counter.toString() + " - " + symbolList[0];
+        } else {
+            outputText += "\n" + counter.toString() + " - " + symbolList[Math.floor(Math.random() * symbolList.length)];
+        }
+        counter++;
+    }
+    return [outputText, symbolList[0]];
+}
+
+function updateSymbols() {
+    var insertTextArray = generateSymbolList();
+    pages[4].pageMainText = insertTextArray[0];
+    pages[5].pageMainText = insertTextArray[1];
+    pages[5].pageSubText = pages[5].pageSubText.replace(':insertsymbol:', insertTextArray[1]);
 }
