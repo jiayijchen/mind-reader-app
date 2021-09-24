@@ -1,0 +1,26 @@
+#container {
+    height: 100%;
+}
+
+#mainText {
+    font-size: 350%;
+    height: 50vh;
+    text-align: center;
+}
+
+#subText {
+    opacity: 50%;
+    text-align: center;
+}
+
+#middleButton {
+    opacity: 50%;
+    border-radius: 0px;
+    color: white;
+    height: 80px;
+}
+
+#resetButton {
+    height: 90px;
+    width: 90px;
+}
