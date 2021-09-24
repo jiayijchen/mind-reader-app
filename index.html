@@ -10,32 +10,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <title>MindReader</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <h1 id="mainText"></h1>
+    <div class="container mh-100">
+        <div class="row pt-5">
+            <div class="h1 text-secondary overflow-auto" id="mainText"></div>
         </div>
-        <div class="row">
+        <div class="row pt-1 ps-5 pe-5">
+            <button type="button" class="btn btn-lg btn-info border-dark" id="middleButton"></button>
         </div>
-        <div class="row">
-            <button type="button" id="middleButton"></button>
+        <div class="row pt-5">
+            <div class="h2 text-info" id="subText"></div>
         </div>
-        <div class="row">
-            <p id="subText"></p>
-        </div>
-        <div class="row">
-            <button type="button" id="resetButton"></button>
+        <div class="row pb-2 pe-4 position-absolute bottom-0 end-0">
+            <button type="button" class="btn border-dark rounded-circle text-info" id="resetButton"></button>
         </div>
     </div>
 
-
-    <!-- Optional JavaScript; choose one of the two! -->
     <script src="./js/main.js"></script>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>

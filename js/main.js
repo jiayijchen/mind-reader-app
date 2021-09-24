@@ -7,52 +7,52 @@ const symbolString = "!@#$%^&*?~"
 const pages = [
     {
         // page 0,
-        pageMainText: "I can read your mind",
+        pageMainText: "I can read<br>your mind",
         middleButtonText: "NEXT",
         middleButtonVisibility: "hidden",
         pageSubText: "",
-        resetButtonText: "GO"
+        resetButtonText: "<strong>GO</strong>"
 
     },
     {
         // page 1
-        pageMainText: "Pick a number from 01 - 99",
+        pageMainText: "Pick a<br>number<br>from<br>01 - 99",
         middleButtonText: "NEXT",
         middleButtonVisibility: "visible",
-        pageSubText: "when you have your number click next",
-        resetButtonText: "icon"
+        pageSubText: "when you have your number<br>click next",
+        resetButtonText: "<strong>RESET</strong>"
     },
     {
         // page 2
-        pageMainText: "Add both digits together to get a new number",
+        pageMainText: "Add both<br>digits<br>together<br>to get a<br>new<br>number",
         middleButtonText: "NEXT",
         middleButtonVisibility: "visible",
-        pageSubText: "Ex: 14 is 1 + 4 = 5\n click next to proceed",
-        resetButtonText: "icon"
+        pageSubText: "Ex: 14 is 1 + 4 = 5<br><br>click next to proceed",
+        resetButtonText: "<strong>RESET</strong>"
     },
     {
         // page 3
-        pageMainText: "Subtract your new number from the original number",
+        pageMainText: "Subtract<br>your new<br>number<br>from the<br>original<br>number",
         middleButtonText: "NEXT",
         middleButtonVisibility: "visible",
-        pageSubText: "Ex: 14 - 5 = 9\n click next to proceed",
-        resetButtonText: "icon"
+        pageSubText: "Ex: 14 - 5 = 9<br><br>click next to proceed",
+        resetButtonText: "<strong>RESET</strong>"
     },
     {
         // page 4
         pageMainText: ":insertsymbollist:",
         middleButtonText: "REVEAL",
         middleButtonVisibility: "visible",
-        pageSubText: "Find your new number.\nNote the symbol beside the number",
-        resetButtonText: "icon"
+        pageSubText: "Find your new number.<br><br>Note the symbol beside the number",
+        resetButtonText: "<strong>RESET</strong>"
     },
     {
         // page 5
         pageMainText: ":insertsymbol:",
         middleButtonText: "",
         middleButtonVisibility: "hidden",
-        pageSubText: "Your symbol is:\n:insertsymbol:",
-        resetButtonText: "icon"
+        pageSubText: "Your symbol is:<br><br>:insertsymbol:",
+        resetButtonText: "<strong>RESET</strong>"
     }
 ]
 
