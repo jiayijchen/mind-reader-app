@@ -105,11 +105,15 @@ function generateSymbolList() {
     var outputText = "0 - " + symbolList[0];
     counter = 1;
     while (counter < 100) {
-        if (counter % 9 == 0) {
-            outputText += "\n" + counter.toString() + " - " + symbolList[0];
-        } else {
-            outputText += "\n" + counter.toString() + " - " + symbolList[Math.floor(Math.random() * symbolList.length)];
-        }
+        outputText += "<br>" + counter.toString() + " - " + 
+            (counter % 9 == 0 ? 
+                symbolList[0] : 
+                symbolList[Math.floor(Math.random() * symbolList.length)]);
+        // if (counter % 9 == 0) {
+        //     outputText += "<br>" + counter.toString() + " - " + symbolList[0];
+        // } else {
+        //     outputText += "<br>" + counter.toString() + " - ";
+        // }
         counter++;
     }
     return [outputText, symbolList[0]];
