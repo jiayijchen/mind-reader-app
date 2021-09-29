@@ -14,7 +14,7 @@ INITIALIZE array of pages (objects?)
 
 INITIALIZE variable to hold page number
 
-INITIALIZE home page using initial page (1) values
+INITIALIZE home page using initial page (0) values
     OUTPUT main text, middle button, text for after button, reset button
         to document
 
