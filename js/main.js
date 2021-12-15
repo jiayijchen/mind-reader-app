@@ -123,5 +123,5 @@ function updateSymbols() {
     var insertTextArray = generateSymbolList();
     pages[4].pageMainText = insertTextArray[0];
     pages[5].pageMainText = insertTextArray[1];
-    pages[5].pageSubText = pages[5].pageSubText.replace(':insertsymbol:', insertTextArray[1]);
+    pages[5].pageSubText = "Your symbol is:<br><br>"+ insertTextArray[1];
 }
